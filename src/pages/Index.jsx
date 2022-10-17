@@ -1,7 +1,12 @@
 import React from "react";
+import Chart from "../components/chart/Chart";
 
 const Main = () => {
-  return <>메인페이지</>;
+  return (
+    <>
+      <Chart />
+    </>
+  );
 };
 
 export default Main;
