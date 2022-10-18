@@ -3,6 +3,7 @@ import { useNavigate, Outlet } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import { BarChartOutlined, UserOutlined } from "@ant-design/icons";
 import { BsFileEarmarkPost } from "react-icons/bs";
+import { BiLogOut } from "react-icons/bi";
 import styled from "styled-components";
 
 const { Header, Content, Sider } = Layout;
@@ -28,6 +29,7 @@ const Main = () => {
     getItem("CHART", "1", <BarChartOutlined />, "/"),
     getItem("BOARD", "2", <BsFileEarmarkPost />, "/board"),
     getItem("USER SETTING", "3", <UserOutlined />, "/user"),
+    getItem("LOGOUT", "4", <BiLogOut />, "/login"),
   ];
 
   return (
@@ -42,7 +44,7 @@ const Main = () => {
           style={{
             padding: 0,
           }}
-        />{" "}
+        />
         <Layout className="site-layout">
           <Sider
             collapsible
