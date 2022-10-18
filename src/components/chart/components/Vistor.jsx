@@ -12,20 +12,20 @@ const Visitor = () => {
       },
     ],
     options: {
-      // chart: {
-      //   type: "line",
-      //   zoom: {
-      //     enabled: false,
-      //   },
-      // },
-      // dataLabels: {
-      //   enabled: false,
-      // },
-      // stroke: {
-      //   curve: "smooth",
-      //   width: 5,
-      // },
-      // colors: [COLOR_2],
+      chart: {
+        type: "line",
+        zoom: {
+          enabled: false,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: "smooth",
+        width: 5,
+      },
+      colors: [COLOR_2],
       xaxis: {
         categories: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
       },

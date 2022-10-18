@@ -11,32 +11,32 @@ const Post = () => {
       },
     ],
     options: {
-      // chart: {
-      //   height: 350,
-      //   type: "bar",
-      //   events: {
-      //     click: function (chart, w, e) {},
-      //   },
-      // },
-      // plotOptions: {
-      //   bar: {
-      //     columnWidth: "45%",
-      //     distributed: true,
-      //   },
-      // },
-      // dataLabels: {
-      //   enabled: false,
-      // },
-      // legend: {
-      //   show: false,
-      // },
+      chart: {
+        height: 350,
+        type: "bar",
+        events: {
+          click: function (chart, w, e) {},
+        },
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "55%",
+          distributed: true,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
       xaxis: {
         categories: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
-        // labels: {
-        //   style: {
-        //     fontSize: "12px",
-        //   },
-        // },
+        labels: {
+          style: {
+            fontSize: "12px",
+          },
+        },
       },
     },
   };
