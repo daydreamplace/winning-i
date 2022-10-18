@@ -31,7 +31,7 @@
 1.  터미널을 키고 원하는 폴더 경로로 이동해 레포지토리를 클론 받습니다.
 
 ```
-git clone https://github.com/daydreamplace/
+git clone https://github.com/daydreamplace/winning-i
 ```
 
 <br />
@@ -60,8 +60,8 @@ npm run dev
 ### 파일 프로젝트 구조
 
 - `public/data`: Mock 데이터 폴더
-- `src/pages/`:
-- `src/styles`:
+- `src/pages/`: Index 페이지 폴더
+- `src/components`: components 폴더
   <br />
   <br />
 
@@ -78,6 +78,10 @@ npm run dev
 - react-router-dom
 - styled-components
 - react-icons
+- Ant design
+- Tailwind css
+- Toast ui editor
+- Apex Chart
 
 <br />
 
