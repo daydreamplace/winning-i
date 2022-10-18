@@ -1,7 +1,9 @@
+import React from "react";
 import { Viewer } from "@toast-ui/react-editor";
+import "@toast-ui/editor/dist/toastui-editor-viewer.css";
 
-const EditViewer = () => {
-  return <Viewer />;
-};
+function ContentsViewer({ contents }) {
+  return <Viewer initialValue={contents || ""} />;
+}
 
-export default EditViewer;
+export default ContentsViewer;
