@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { Layout, Menu } from "antd";
-import Chart from "../components/chart/Chart";
 import { BarChartOutlined, UserOutlined } from "@ant-design/icons";
 import { BsFileEarmarkPost } from "react-icons/bs";
 import styled from "styled-components";
@@ -26,7 +25,7 @@ const Main = () => {
   }
 
   const items = [
-    getItem("CHART", "1", <BarChartOutlined />, undefined),
+    getItem("CHART", "1", <BarChartOutlined />, "/"),
     getItem("BOARD", "2", <BsFileEarmarkPost />, "/board"),
     getItem("USER SETTING", "3", <UserOutlined />, "/user"),
   ];
