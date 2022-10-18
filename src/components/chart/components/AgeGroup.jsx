@@ -1,47 +1,42 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import { COLOR_2 } from "./constants/ChartConstant";
 
 const AgeGroup = () => {
-  return (
-    <Chart
-      options={{
-        chart: {
-          type: "line",
-          zoom: {
-            enabled: false,
+  const data = {
+    series: [44, 55, 13, 43, 22],
+    options: {
+      chart: {
+        width: 380,
+        type: "pie",
+      },
+      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
           },
         },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          curve: "smooth",
-          width: 3,
-        },
-        colors: [COLOR_2],
-        xaxis: {
-          categories: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-          ],
-        },
-      }}
-      series={[
-        {
-          name: "Desktops",
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
-        },
-      ]}
-      height={300}
-    />
+      ],
+    },
+  };
+
+  return (
+    <>
+      <div id="chart">
+        <Chart
+          options={data.options}
+          series={data.series}
+          type="pie"
+          width={380}
+        />
+      </div>
+    </>
   );
 };
 
