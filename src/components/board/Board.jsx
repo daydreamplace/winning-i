@@ -2,45 +2,6 @@ import React, { useState } from "react";
 import { Button, Space, Table } from "antd";
 import styled from "styled-components";
 
-const data = [
-  {
-    id: "1",
-    user: "John Brown",
-    title: "New York No. 1 Lake Park",
-    create_at: "2022.10.18",
-  },
-  {
-    id: "2",
-    user: "Jim Green",
-    title: "London No. 1 Lake Park",
-    create_at: "2022.10.18",
-  },
-  {
-    id: "3",
-    user: "Joe Black",
-    title: "Sidney No. 1 Lake Park",
-    create_at: "2022.10.18",
-  },
-  {
-    id: "4",
-    user: "Joe Black",
-    title: "Sidney No. 1 Lake Park",
-    create_at: "2022.10.18",
-  },
-  {
-    id: "5",
-    user: "Joe Black",
-    title: "Sidney No. 1 Lake Park",
-    create_at: "2022.10.15",
-  },
-  {
-    id: "6",
-    user: "Joe Black",
-    title: "Sidney No. 1 Lake Park",
-    create_at: "2022.10.10",
-  },
-];
-
 const Board = () => {
   const [sortedInfo, setSortedInfo] = useState({});
 
@@ -99,6 +60,45 @@ const Board = () => {
     </>
   );
 };
+
+const data = [
+  {
+    id: "1",
+    user: "John Brown",
+    title: "New York No. 1 Lake Park",
+    create_at: "2022.10.18",
+  },
+  {
+    id: "2",
+    user: "Jim Green",
+    title: "London No. 1 Lake Park",
+    create_at: "2022.10.18",
+  },
+  {
+    id: "3",
+    user: "Joe Black",
+    title: "Sidney No. 1 Lake Park",
+    create_at: "2022.10.18",
+  },
+  {
+    id: "4",
+    user: "Joe Black",
+    title: "Sidney No. 1 Lake Park",
+    create_at: "2022.10.18",
+  },
+  {
+    id: "5",
+    user: "Joe Black",
+    title: "Sidney No. 1 Lake Park",
+    create_at: "2022.10.15",
+  },
+  {
+    id: "6",
+    user: "Joe Black",
+    title: "Sidney No. 1 Lake Park",
+    create_at: "2022.10.10",
+  },
+];
 
 const BoardSpace = styled(Space)``;
 
