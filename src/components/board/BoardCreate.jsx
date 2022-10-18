@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
 import Editor from "./components/Editor";
+import Viewer from "./components/Viewer";
 import styled from "styled-components";
 
 const BoardCreate = () => {
@@ -29,7 +30,7 @@ const BoardCreate = () => {
     // data fetch
     async function fetchAPI() {
       const data = await Promise.resolve({
-        title: "wpahr",
+        title: "데이터 제목",
         content: "12312312",
       });
       form.setFieldValue("title", data.title);
@@ -54,7 +55,9 @@ const BoardCreate = () => {
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24}>
                   <Form.Item label="content" name="content">
-                    {id && !location.pathname.includes("update") ? null : (
+                    {id && !location.pathname.includes("update") ? (
+                      <Viewer />
+                    ) : (
                       <Editor
                         initialValue={watchContent}
                         onChange={(html) => {
