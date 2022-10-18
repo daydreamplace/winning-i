@@ -3,83 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Button, Space, Table } from "antd";
 import styled from "styled-components";
 
-const Board = () => {
-  const navigate = useNavigate();
-  const [sortedInfo, setSortedInfo] = useState({});
-
-  const handleChange = (pagination, sorter) => {
-    setSortedInfo(sorter);
-  };
-
-  const onClear = () => {
-    setSortedInfo({});
-  };
-
-  const setNumSort = () => {
-    setSortedInfo({
-      order: "descend",
-      columnKey: "id",
-    });
-  };
-
-  const columns = [
-    {
-      title: "No.",
-      dataIndex: "id",
-      key: "id",
-    },
-    {
-      title: "Title",
-      dataIndex: "title",
-      key: "title",
-    },
-    {
-      title: "User",
-      dataIndex: "user",
-      key: "user",
-    },
-    {
-      title: "Create",
-      dataIndex: "create_at",
-      key: "create_at",
-    },
-  ];
-
-  const onCreate = (e) => {
-    navigate("create");
-  };
-
-  return (
-    <>
-      <BoardSpace
-        style={{
-          marginBottom: 16,
-        }}
-      >
-        <div className="buttons">
-          <Button onClick={setNumSort}>Sort No.</Button>
-          <Button onClick={onClear}>Clear Sort</Button>
-          <Button type="primary" onClick={onCreate}>
-            POST
-          </Button>
-        </div>
-      </BoardSpace>
-      <Table
-        columns={columns}
-        dataSource={data}
-        onChange={handleChange}
-        onRow={(row, index) => {
-          return {
-            onClick: (e) => {
-              navigate(`/board/${row.id}`);
-            },
-          };
-        }}
-      />
-    </>
-  );
-};
-
 const data = [
   {
     id: "1",
@@ -119,6 +42,64 @@ const data = [
   },
 ];
 
-const BoardSpace = styled(Space)``;
+const columns = [
+  {
+    title: "No.",
+    dataIndex: "id",
+    key: "id",
+  },
+  {
+    title: "Title",
+    dataIndex: "title",
+    key: "title",
+  },
+  {
+    title: "User",
+    dataIndex: "user",
+    key: "user",
+  },
+  {
+    title: "Create",
+    dataIndex: "create_at",
+    key: "create_at",
+  },
+];
+
+const Board = () => {
+  const navigate = useNavigate();
+
+  const onCreate = (e) => {
+    navigate("create");
+  };
+
+  return (
+    <BoardSpace>
+      <div className="button">
+        <Button type="primary" onClick={onCreate}>
+          POST
+        </Button>
+      </div>
+      <Table
+        columns={columns}
+        dataSource={data}
+        onRow={(row, index) => {
+          return {
+            onClick: (e) => {
+              navigate(`/board/${row.id}`);
+            },
+          };
+        }}
+      />
+    </BoardSpace>
+  );
+};
+
+const BoardSpace = styled.div`
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+`;
 
 export default Board;
