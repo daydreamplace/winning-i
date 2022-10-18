@@ -12,11 +12,10 @@ const Main = () => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
 
-  function getItem(label, key, icon, children, link) {
+  function getItem(label, key, icon, link) {
     return {
       key,
       icon,
-      children,
       label,
       ...(link && {
         onClick: () => {
@@ -27,9 +26,9 @@ const Main = () => {
   }
 
   const items = [
-    getItem("CHART", "1", <BarChartOutlined />),
-    getItem("BOARD", "2", <BsFileEarmarkPost />),
-    getItem("USER SETTING", "3", <UserOutlined />),
+    getItem("CHART", "1", <BarChartOutlined />, undefined),
+    getItem("BOARD", "2", <BsFileEarmarkPost />, "/board"),
+    getItem("USER SETTING", "3", <UserOutlined />, "/user"),
   ];
 
   return (
@@ -72,7 +71,6 @@ const Main = () => {
               }}
             >
               <Outlet />
-              <Chart />
             </div>
           </Content>
         </Layout>
