@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import { COLORS } from "./constants/ChartConstant";
+import styled from "styled-components";
 
 const Post = () => {
   const data = {
@@ -50,8 +50,16 @@ const Post = () => {
   };
 
   return (
-    <Chart options={data.options} series={data.series} type="bar" width={500} />
+    <PostChart>
+      <h1>Monthly Post</h1>
+      <Chart options={data.options} series={data.series} type="bar" />
+    </PostChart>
   );
 };
+
+const PostChart = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export default Post;
