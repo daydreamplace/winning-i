@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/Index";
 import Chart from "./components/chart/Chart";
-// import Board from "./components/board/Board";
+import Board from "./components/board/Board";
 // import BoardCreate from "./components/board/BoardCreate";
 import { ThemeProvider } from "styled-components";
 import * as Theme from "./Theme";
@@ -18,12 +18,12 @@ const App = () => {
             <Route path="/" element={<Main />}>
               <Route end index element={<Chart />} />
             </Route>
-            {/* <Route path="/boards" element={<Main />}>
+            <Route path="/board" element={<Main />}>
               <Route end index element={<Board />} />
-              <Route path="create" element={<BoardCreate />} />
+              {/*} <Route path="create" element={<BoardCreate />} />
               <Route path=":id" element={<BoardCreate />} />
-              <Route path=":id/update" element={<BoardCreate />} />
-            </Route> */}
+              <Route path=":id/update" element={<BoardCreate />} /> */}
+            </Route>
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

@@ -26,7 +26,7 @@ const Main = () => {
   }
 
   const items = [
-    getItem("CHART", "1", <BarChartOutlined />, undefined),
+    getItem("CHART", "1", <BarChartOutlined />, "/"),
     getItem("BOARD", "2", <BsFileEarmarkPost />, "/board"),
     getItem("USER SETTING", "3", <UserOutlined />, "/user"),
   ];
