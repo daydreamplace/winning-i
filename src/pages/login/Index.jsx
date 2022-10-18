@@ -1,11 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Checkbox, Form, Input } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
+  };
+
+  const goMain = () => {
+    navigate("/");
   };
 
   return (
@@ -61,6 +68,7 @@ const Login = () => {
             type="primary"
             htmlType="submit"
             className="login-form-button"
+            onClick={goMain}
           >
             Login
           </Button>
