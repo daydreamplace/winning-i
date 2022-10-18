@@ -56,7 +56,7 @@ const BoardCreate = () => {
                 <Col xs={24} sm={24} md={24} lg={24}>
                   <Form.Item label="content" name="content">
                     {id && !location.pathname.includes("update") ? (
-                      <Viewer />
+                      <Viewer watchContent={watchContent} />
                     ) : (
                       <Editor
                         initialValue={watchContent}
