@@ -28,14 +28,13 @@ const AgeGroup = () => {
 
   return (
     <>
-      <div id="chart">
-        <Chart
-          options={data.options}
-          series={data.series}
-          type="pie"
-          width={380}
-        />
-      </div>
+      <h1>Age Group Chart</h1>
+      <Chart
+        options={data.options}
+        series={data.series}
+        type="pie"
+        width={500}
+      />
     </>
   );
 };

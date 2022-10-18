@@ -41,7 +41,12 @@ const Visitor = () => {
     },
   };
 
-  return <Chart options={data.options} series={data.series} height={300} />;
+  return (
+    <>
+      <h1> Vistor Chart</h1>
+      <Chart options={data.options} series={data.series} width={500} />
+    </>
+  );
 };
 
 export default Visitor;
