@@ -52,7 +52,12 @@ const Post = () => {
   return (
     <PostChart>
       <h1>Monthly Post</h1>
-      <Chart options={data.options} series={data.series} type="bar" />
+      <Chart
+        options={data.options}
+        series={data.series}
+        type="bar"
+        width={500}
+      />
     </PostChart>
   );
 };

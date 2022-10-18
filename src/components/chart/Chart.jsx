@@ -15,6 +15,11 @@ const Chart = () => {
 
 const Charts = styled.div`
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 0 10px;
 `;
 
 export default Chart;

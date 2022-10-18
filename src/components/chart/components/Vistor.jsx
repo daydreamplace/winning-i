@@ -45,7 +45,7 @@ const Visitor = () => {
   return (
     <VistorChart>
       <h1>Monthly Vistor</h1>
-      <Chart options={data.options} series={data.series} />
+      <Chart options={data.options} series={data.series} width={500} />
     </VistorChart>
   );
 };
