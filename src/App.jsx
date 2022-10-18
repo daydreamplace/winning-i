@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/Index";
 import Chart from "./components/chart/Chart";
-import Board from "./components/board/Board";
+import Board from "./components/board/BoardList";
 import BoardCreate from "./components/board/BoardCreate";
 import { ThemeProvider } from "styled-components";
 import * as Theme from "./Theme";

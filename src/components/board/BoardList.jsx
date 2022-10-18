@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Space, Table } from "antd";
 import styled from "styled-components";
 
 const Board = () => {
+  const navigate = useNavigate();
   const [sortedInfo, setSortedInfo] = useState({});
 
   const handleChange = (pagination, sorter) => {
@@ -43,6 +45,10 @@ const Board = () => {
     },
   ];
 
+  const onCreate = (e) => {
+    navigate("create");
+  };
+
   return (
     <>
       <BoardSpace
@@ -53,10 +59,23 @@ const Board = () => {
         <div className="buttons">
           <Button onClick={setNumSort}>Sort No.</Button>
           <Button onClick={onClear}>Clear Sort</Button>
-          <Button type="primary">POST</Button>
+          <Button type="primary" onClick={onCreate}>
+            POST
+          </Button>
         </div>
       </BoardSpace>
-      <Table columns={columns} dataSource={data} onChange={handleChange} />
+      <Table
+        columns={columns}
+        dataSource={data}
+        onChange={handleChange}
+        onRow={(row, index) => {
+          return {
+            onClick: (e) => {
+              navigate(`/board/${row.id}`);
+            },
+          };
+        }}
+      />
     </>
   );
 };

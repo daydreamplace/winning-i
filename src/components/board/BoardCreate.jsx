@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
 import Editor from "./components/Editor";
@@ -23,6 +23,20 @@ const BoardCreate = () => {
       content: "POST CREATED",
     });
   };
+
+  useEffect(() => {
+    if (!id) return;
+    // data fetch
+    async function fetchAPI() {
+      const data = await Promise.resolve({
+        title: "wpahr",
+        content: "12312312",
+      });
+      form.setFieldValue("title", data.title);
+      form.setFieldValue("content", data.content);
+    }
+    fetchAPI();
+  }, [id]);
 
   return (
     <>
