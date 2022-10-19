@@ -14,7 +14,7 @@
 
 <br />
 
-**기간** : 10월 18일 ~
+**기간** : 10월 18일 ~ 20
 <br />
 <br />
 
@@ -59,8 +59,8 @@ npm run dev
 
 ### 파일 프로젝트 구조
 
-- `public/data`: Mock 데이터 폴더
-- `src/pages/`: Index 페이지 폴더
+- `db.json`: json-server 파일
+- `src/pages`: Index 페이지 폴더
 - `src/components`: components 폴더
   <br />
   <br />
@@ -77,10 +77,11 @@ npm run dev
 - React.js
 - react-router-dom
 - styled-components
+- axios
 - react-icons
-- Ant design
-- Toast ui editor
-- Apex Chart
+- antd
+- toast-ui-editor
+- react-apexcharts
 - json-server
 
 <br />
