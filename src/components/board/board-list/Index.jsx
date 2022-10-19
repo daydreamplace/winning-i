@@ -1,16 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { Button, Table } from "antd";
 import styled from "styled-components";
 
 const Board = () => {
   const navigate = useNavigate();
+  const [boardList, setBoardList] = useState([]);
 
   const onCreate = (e) => {
     navigate("create");
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    axios.get("http://localhost:4444/board").then((res) => {
+      setBoardList(res.data);
+    });
+  }, []);
 
   return (
     <BoardSpace>
@@ -21,7 +27,7 @@ const Board = () => {
       </div>
       <Table
         columns={columns}
-        dataSource={data}
+        dataSource={boardList}
         onRow={(row) => {
           return {
             onClick: (e) => {
@@ -54,45 +60,6 @@ const columns = [
     title: "Create",
     dataIndex: "create_at",
     key: "create_at",
-  },
-];
-
-const data = [
-  {
-    id: "1",
-    user: "Eden",
-    title: "How to use GitHub",
-    create_at: "2022.10.18",
-  },
-  {
-    id: "2",
-    user: "Brie",
-    title: "How to use apexcharts in react",
-    create_at: "2022.10.18",
-  },
-  {
-    id: "3",
-    user: "Eden",
-    title: "How to use toast ui in react",
-    create_at: "2022.10.30",
-  },
-  {
-    id: "4",
-    user: "Eden",
-    title: "How to use Antd in react",
-    create_at: "2022.10.17",
-  },
-  {
-    id: "5",
-    user: "Eden",
-    title: "How to use Axios in react",
-    create_at: "2022.10.15",
-  },
-  {
-    id: "6",
-    user: "Eden",
-    title: "What is json-server?",
-    create_at: "2022.10.10",
   },
 ];
 
