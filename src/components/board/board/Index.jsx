@@ -79,11 +79,11 @@ const BoardCreate = () => {
                 <Col xs={24} sm={24} md={24} lg={24}>
                   <Form.Item label="Content" name="content">
                     {id && !location.pathname.includes("update") ? (
-                      <ViewerBorder>
+                      <ViewerStyle>
                         {watchContent ? (
                           <Viewer initialValue={watchContent} />
                         ) : null}
-                      </ViewerBorder>
+                      </ViewerStyle>
                     ) : (
                       <Editor
                         initialValue={watchContent}
@@ -142,7 +142,6 @@ const BoardPage = styled.div`
 `;
 
 const Title = styled(Input)`
-  width: 100%;
   padding: 15px;
 `;
 
@@ -150,10 +149,10 @@ const Buttons = styled(Button)`
   margin: 0 10px;
 `;
 
-const ViewerBorder = styled.div`
+const ViewerStyle = styled.div`
   padding: 10px 20px;
-  background-color: #ebebeb;
-  border: 1px solid lightgray;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
 `;
 
 export default BoardCreate;
