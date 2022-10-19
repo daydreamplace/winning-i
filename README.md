@@ -59,7 +59,7 @@ npm run dev
 
 ### 파일 프로젝트 구조
 
-- `public/data`: Mock 데이터 폴더
+- `db.json`: json-server 파일
 - `src/pages/`: Index 페이지 폴더
 - `src/components`: components 폴더
   <br />
@@ -78,9 +78,9 @@ npm run dev
 - react-router-dom
 - styled-components
 - react-icons
-- Ant design
-- Toast ui editor
-- Apex Chart
+- antd
+- toast-ui-editor
+- react-apexCharts
 - json-server
 
 <br />
