@@ -150,6 +150,7 @@ const Buttons = styled(Button)`
 `;
 
 const ViewerStyle = styled.div`
+  height: 600px;
   padding: 10px 20px;
   border: 1px solid #ebebeb;
   border-radius: 5px;
