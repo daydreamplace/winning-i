@@ -12,25 +12,26 @@ const AgeGroup = () => {
   };
 
   return (
-    <ChartStyle
-      options={data.options}
-      series={data.series}
-      type="pie"
-      width={"100%"}
-    />
+    <ChartPage>
+      <ChartStyle options={data.options} series={data.series} type="pie" />
+    </ChartPage>
   );
 };
 
-const ChartStyle = styled(Chart)`
+const ChartPage = styled.div`
   width: 30%;
-  background-color: #ebebeb;
-  border: 1px solid transparent;
+  padding-top: 5px;
+  border: 1px solid #ebebeb;
   border-radius: 5px;
 
   @media (max-width: 1280px) {
     width: 100%;
     margin: 10px 0;
   }
+`;
+
+const ChartStyle = styled(Chart)`
+  width: 100%;
 `;
 
 export default AgeGroup;

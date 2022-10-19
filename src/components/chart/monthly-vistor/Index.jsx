@@ -3,12 +3,12 @@ import Chart from "react-apexcharts";
 import { COLOR_5 } from "../constants/Index";
 import styled from "styled-components";
 
-const Visitor = () => {
+const Visitor = ({ chartData }) => {
   const data = {
     series: [
       {
         name: "Monthly Vistor",
-        data: [20, 28, 50, 30, 88, 75, 100],
+        data: chartData,
       },
     ],
     options: {
@@ -31,23 +31,29 @@ const Visitor = () => {
   };
 
   return (
-    <ChartStyle options={data.options} series={data.series} width={"100%"} />
+    <ChartPage>
+      <ChartStyle options={data.options} series={data.series} />
+    </ChartPage>
   );
 };
 
-const ChartStyle = styled(Chart)`
+const ChartPage = styled.div`
   display: flex;
   align-items: center;
   width: 30%;
-  padding-right: 10px;
-  background-color: #ebebeb;
-  border: 1px solid transparent;
+  padding: 10px;
+  padding-right: 20px;
+  border: 1px solid #ebebeb;
   border-radius: 5px;
 
   @media (max-width: 1280px) {
     width: 100%;
     margin: 10px 0;
   }
+`;
+
+const ChartStyle = styled(Chart)`
+  width: 100%;
 `;
 
 export default Visitor;
