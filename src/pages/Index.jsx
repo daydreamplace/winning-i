@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { Layout, Menu } from "antd";
+import { Avatar, Badge } from "antd";
 import { BarChartOutlined, UserOutlined } from "@ant-design/icons";
 import { BsFileEarmarkPost } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
@@ -44,7 +45,11 @@ const Main = () => {
           style={{
             padding: 0,
           }}
-        />
+        >
+          <AvatarStyle count={88}>
+            <Avatar size={43}>EDEN</Avatar>
+          </AvatarStyle>
+        </Header>
         <Layout className="site-layout">
           <Sider
             collapsible
@@ -81,5 +86,12 @@ const Main = () => {
 };
 
 const MainPage = styled.div``;
+
+const AvatarStyle = styled(Badge)`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 13px;
+  margin-right: 20px;
+`;
 
 export default Main;
