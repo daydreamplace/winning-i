@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { apiClient } from "../../../api/client";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
@@ -150,6 +150,7 @@ const Buttons = styled(Button)`
 `;
 
 const ViewerStyle = styled.div`
+  height: 600px;
   padding: 10px 20px;
   border: 1px solid #ebebeb;
   border-radius: 5px;
