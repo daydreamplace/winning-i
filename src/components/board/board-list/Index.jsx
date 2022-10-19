@@ -13,7 +13,7 @@ const Board = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:4444/board").then((res) => {
+    axios.get("http://localhost:4000/board").then((res) => {
       setBoardList(res.data);
     });
   }, []);
