@@ -136,14 +136,29 @@ password : 1234@qwer"
   <br />
 
 #### ✅ Chart
-- `apex-charts` 라이브러리를 활용해 차트 레이아웃과 확대, 축소, 저장 등의 기능을 구현
+- `apex-charts` 라이브러리를 활용해 차트 레이아웃과 확대, 축소, 파일 저장 등의 기능을 구현
 - `json-server`를 이용해 데이터를 동적으로 구현
-- `domtodom`과 `file-saver`를 활용해 Chart 페이지를 캡쳐 후 저장할 수 있게 구현
+- `dom-to-image`과 `file-saver`를 활용해 Chart 페이지를 캡쳐 후 저장할 수 있게 구현
+- 1280px을 기준으로 반응형 구현
 
   <br />
 
 #### ✅ Board
-- `toast-ui-editor`를 활용해 Markdown WYSIWYG 에디터 구현, color-syntax 가능하게 레이아웃 구현
-- `json-server`데이터를 
+- `antd`를 활용해 레이아웃 구현
+- `json-server`데이터를 받아서 Board 페이지 목록 구현
+- 게시글 10개 단위로 페이지네이션 
+- POST 버튼 클릭 시 게시글 작성 페이지로 이동
+- 게시글 클릭 시 상세 페이지로 이동
 
+  <br />
+#### ✅ Board 작성 페이지
+- `toast-ui-editor`를 활용해 Markdown & WYSIWYG 에디터 구현, color-syntax 선택 가능하게 레이아웃, 작성 기능 구현
+- 게시글 작성 후 등록하면 DB에 저장되게 구현
+- 게시글 등록버튼 클릭 시 게시글 DB 등록 후 Board 페이지로 이동
+
+  <br />
+#### ✅ Board 상세 페이지
+- `json-server`데이터를 받아서 상세 페이지 구현
+- 상세 페이지 하단 update 버튼 클릭 시 게시글 수정 가능하게 구현
+- 상세 페이지 하단 remove 버튼 클릭 시 게시글 삭제 기능 구현
   <br />
