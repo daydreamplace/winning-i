@@ -42,22 +42,30 @@ const Post = () => {
     },
   };
 
-  return <ChartStyle options={data.options} series={data.series} type="bar" />;
+  return (
+    <ChartPage>
+      <ChartStyle options={data.options} series={data.series} type="bar" />
+    </ChartPage>
+  );
 };
 
-const ChartStyle = styled(Chart)`
+const ChartPage = styled.div`
   display: flex;
   align-items: center;
   width: 30%;
-  padding-right: 10px;
-  background-color: #ebebeb;
-  border: 1px solid transparent;
+  padding: 10px;
+  padding-right: 20px;
+  border: 1px solid #ebebeb;
   border-radius: 5px;
 
   @media (max-width: 1280px) {
     width: 100%;
     margin: 10px 0;
   }
+`;
+
+const ChartStyle = styled(Chart)`
+  width: 100%;
 `;
 
 export default Post;
