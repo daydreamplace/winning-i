@@ -15,10 +15,13 @@ const Chart = () => {
   };
 
   return (
-    <>
-      <ImgSave type="primary" icon={<DownloadOutlined />} onClick={onSave}>
-        Image Save
-      </ImgSave>
+    <ChartPage>
+      <h1>CHART</h1>
+      <div className="top">
+        <Button type="primary" icon={<DownloadOutlined />} onClick={onSave}>
+          Image Save
+        </Button>
+      </div>
       <div id="capture">
         <Charts>
           <Vistor />
@@ -26,23 +29,34 @@ const Chart = () => {
           <Post />
         </Charts>
       </div>
-    </>
+    </ChartPage>
   );
 };
+
+const ChartPage = styled.div`
+  padding: 20px;
+
+  h1 {
+    color: #3e82f7;
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
 
 const Charts = styled.div`
   display: flex;
   justify-content: space-between;
-  width: calc(50% -10px);
+  margin-top: 20px;
 
   @media (max-width: 1280px) {
     flex-direction: column;
     width: 100%;
   }
-`;
-
-const ImgSave = styled(Button)`
-  margin-bottom: 10px;
 `;
 
 export default Chart;
