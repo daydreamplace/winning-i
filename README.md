@@ -10,7 +10,7 @@
 
 ---
 
-## **[📌링크]( https://eden-winning-i.netlify.app )**
+## **[📌배포 사이트]( https://eden-winning-i.netlify.app )**
 🚨 배포 사이트를 들어가기 전에 서버를 꼭 켜야됩니다. 🚨
 아래 서버 실행 방법을 참고하셔서 서버를 키신 후에 배포 사이트 이용 바랍니다.
  <br/>
