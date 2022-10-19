@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
 import Editor from "../editor/Index";
@@ -9,26 +9,41 @@ import styled from "styled-components";
 const BoardCreate = () => {
   const { id } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const [form] = Form.useForm();
   const watchContent = Form.useWatch("content", form);
 
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
+    console.log(values);
     if (id) {
+      await axios.put("http://localhost:4000/board/" + id, {
+        ...values,
+        user: "Eden",
+      });
+
       Modal.success({
         title: "SUCCESS",
         content: "POST EDITED",
       });
       return;
     }
+    await axios.post("http://localhost:4000/board/", {
+      ...values,
+      user: "Jim Green",
+    });
     Modal.success({
       title: "SUCCESS",
       content: "POST CREATED",
     });
   };
 
+  const onClick = async () => {
+    await axios.delete("http://localhost:4000/board/" + id);
+    navigate("/board", { replace: true });
+  };
+
   useEffect(() => {
     if (!id) return;
-    // data fetch
     async function fetchAPI() {
       const data = await axios
         .get("http://localhost:4000/board/" + id)
@@ -39,12 +54,7 @@ const BoardCreate = () => {
     fetchAPI();
   }, [id]);
 
-  // useEffect(() => {
-  //   if (!id) return;
-  //   axios.post('http://localhost:4000/board/').then(() => {
-  //     user: "Eden";
-  //   });
-  // }, [id]);
+  const isDetailPage = id && !location.pathname.includes("update");
 
   return (
     <>
@@ -87,10 +97,21 @@ const BoardCreate = () => {
               justifyContent: "center",
             }}
           >
-            <Buttons type="primary" htmlType="submit">
-              저장
+            <Buttons
+              type="primary"
+              htmlType={isDetailPage ? "button" : "submit"}
+              onClick={
+                isDetailPage
+                  ? (e) => {
+                      e.preventDefault();
+                      navigate("/board/" + id + "/update", { replace: true });
+                    }
+                  : undefined
+              }
+            >
+              {isDetailPage ? "update" : "save"}
             </Buttons>
-            <Buttons type="default" htmlType="button">
+            <Buttons type="default" htmlType="button" onClick={onClick}>
               remove
             </Buttons>
           </div>

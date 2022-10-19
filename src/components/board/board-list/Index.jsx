@@ -26,6 +26,7 @@ const Board = () => {
         </Button>
       </div>
       <Table
+        rowKey="id"
         columns={columns}
         dataSource={boardList}
         onRow={(row) => {
