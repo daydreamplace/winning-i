@@ -2,12 +2,12 @@ import React from "react";
 import Chart from "react-apexcharts";
 import styled from "styled-components";
 
-const Post = () => {
+const Post = ({ chartData }) => {
   const data = {
     series: [
       {
         name: "Monthly Post",
-        data: [20, 26, 53, 98, 100, 72, 50],
+        data: chartData,
       },
     ],
     options: {
@@ -43,18 +43,9 @@ const Post = () => {
   };
 
   return (
-<<<<<<< HEAD
     <ChartPage>
       <ChartStyle options={data.options} series={data.series} type="bar" />
     </ChartPage>
-=======
-    <ChartStyle
-      options={data.options}
-      series={data.series}
-      type="bar"
-      width={"100%"}
-    />
->>>>>>> main
   );
 };
 
