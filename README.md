@@ -156,12 +156,13 @@ password : 1234@qwer"
 
   <br />
 #### ✅ Board 작성 페이지
-- `toast-ui-editor`를 활용해 Markdown & WYSIWYG 에디터 구현, color-syntax 선택 가능하게 레이아웃, 작성 기능 구현
+- `antd`와 `toast-ui-editor`를 활용해 Markdown & WYSIWYG 에디터 구현, color-syntax 선택 가능하게 레이아웃, 작성 기능 구현
 - 게시글 작성 후 Register 버튼 클릭 시 게시글 DB에 저장되게 구현
 - 게시글 DB 등록 후 Board 페이지로 이동
 
   <br />
 #### ✅ Board 상세 페이지
+- `antd`와 `toast-ui-viewer`를 활용해 레이아웃 구현
 - `json-server`데이터를 받아서 상세 페이지 구현
 - 상세 페이지 하단 EDIT 버튼 클릭 시 게시글 수정 가능하게 구현
 - 상세 페이지 하단 DELETE 버튼 클릭 시 게시글 삭제 기능 구현
