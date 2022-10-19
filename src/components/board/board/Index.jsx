@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { apiClient } from "../../../api/client";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
 import Editor from "../editor/Index";
 import { Viewer } from "@toast-ui/react-editor";
@@ -10,44 +10,49 @@ const BoardCreate = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
+
   const [form] = Form.useForm();
   const watchContent = Form.useWatch("content", form);
 
   const onFinish = async (values) => {
-    console.log(values);
     if (id) {
-      await axios.put("http://localhost:4000/board/" + id, {
+      await apiClient.put("/board/" + id, {
         ...values,
         user: "Eden",
+        create_at: "2022.10.10",
       });
-
       Modal.success({
         title: "SUCCESS",
         content: "POST EDITED",
+        onOk: () => {
+          navigate("/board");
+        },
       });
       return;
     }
-    await axios.post("http://localhost:4000/board/", {
+    await apiClient.post("/board/", {
       ...values,
-      user: "Jim Green",
+      user: "Eden",
+      create_at: "2022.10.10",
     });
     Modal.success({
       title: "SUCCESS",
       content: "POST CREATED",
+      onOk: () => {
+        navigate("/board");
+      },
     });
   };
 
   const onClick = async () => {
-    await axios.delete("http://localhost:4000/board/" + id);
+    await apiClient.delete("/board/" + id);
     navigate("/board", { replace: true });
   };
 
   useEffect(() => {
     if (!id) return;
     async function fetchAPI() {
-      const data = await axios
-        .get("http://localhost:4000/board/" + id)
-        .then((res) => res.data);
+      const data = await apiClient.get("/board/" + id).then((res) => res.data);
       form.setFieldValue("title", data.title);
       form.setFieldValue("content", data.content);
     }
