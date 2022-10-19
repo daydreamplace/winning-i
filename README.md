@@ -1,6 +1,10 @@
 # 👩🏻‍💻 WINNIG I - CHART & BOARD 만들기
 
-### JUSTCODE 6기 기업협업 2주차 과제 (WINNIG I)
+## JUSTCODE 6기 기업협업 2주차 과제 (WINNIG I)
+#### WINNING.I 기업과제 가이드에 따라 admin page로 정의하고 프로젝트를 진행했습니다.
+#### 과제 SAMPLE을 참고하여 저의 판단 및 해석으로 프로젝트 진행했습니다.
+#### 제가 활용해보고 싶은 라이브러리와 기술 스택으로 진행되었습니다.
+#### 시간 관계 상 모든 기능이 구현 된 것은 아니지만, 필수 구현 사항은 모두 진행할 수 있도록 했습니다.
 
 <br />
 
@@ -24,7 +28,7 @@
 
   <br />
 
-## 서버 설치 및 프로그램 실행 방법
+## 🔡 서버 설치 및 프로그램 실행 방법
 
 <br />
 
@@ -35,7 +39,7 @@ https://nodejs.org/
 ```
 <br />
 
-2.  터미널을 키고 원하는 폴더 경로로 이동해 레포지토리를 클론 받습니다.
+2.  터미널에서 원하는 폴더 경로로 이동해 레포지토리를 클론 받습니다.
 
 ```
 git clone https://github.com/daydreamplace/winning-i.git
@@ -86,7 +90,7 @@ password : 1234@qwer"
    <br />
    <br />
 
-## 파일 프로젝트 구조
+## 📂 파일 프로젝트 구조
 
 - `db.json`: json-server 파일
 - `src/pages`: Index 페이지 폴더
@@ -115,29 +119,31 @@ password : 1234@qwer"
 
 <br />
 
-## 구현 기능
-### WINNING.I 기업과제 가이드에 따라 admin page로 정의하고, 필요한 기능들을 추가하려고 했습니다.
+##  구현 기능
+### 
 
 #### ✅ Login & Logout
+- `antd`를 활용해 레이아웃 구현
 - 로그인 시에 차트페이지 이동
 - 로그아웃 시에 로그인 페이지 이동
 
   <br />
 
 #### ✅ Side Bar
-- 슬라이드 사이드 바 구현
+- `antd`를 활용해 슬라이드 사이드 바 구현
 - 버튼 클릭 시에 열고 닫을 수 있게 구현
 
   <br />
 
 #### ✅ Chart
-- apex-charts 라이브러리를 활용해 확대, 축소, 저장 등의 기능을 구현
-- json-server를 이용해 데이터를 동적으로 구현
-- Chart 페이지를 캡쳐 후 자동저장되게 구현
+- `apex-charts` 라이브러리를 활용해 차트 레이아웃과 확대, 축소, 저장 등의 기능을 구현
+- `json-server`를 이용해 데이터를 동적으로 구현
+- `domtodom`과 `file-saver`를 활용해 Chart 페이지를 캡쳐 후 저장할 수 있게 구현
 
   <br />
 
 #### ✅ Board
-- toast-ui 라이브러리를 활용해 Markdown WYSIWYG 에디터 둘 다 사용가능하게 구현
+- `toast-ui-editor`를 활용해 Markdown WYSIWYG 에디터 구현, color-syntax 가능하게 레이아웃 구현
+- `json-server`데이터를 
 
   <br />
