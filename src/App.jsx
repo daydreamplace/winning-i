@@ -5,6 +5,7 @@ import Chart from "./components/chart/chart/Index";
 import BoardList from "./components/board/board-list/Index";
 import Board from "./components/board/board/Index";
 import Login from "./pages/login/Index";
+import User from "./components/user/Index";
 import { ThemeProvider } from "styled-components";
 import * as Theme from "./Theme";
 import GlobalStyle from "./GlobalStyle";
@@ -26,7 +27,9 @@ const App = () => {
               <Route path=":id" element={<Board />} />
               <Route path=":id/update" element={<Board />} />
             </Route>
-            <Route path="/user" element={<Main />} />
+            <Route path="/user" element={<Main />}>
+              <Route end index element={<User />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
