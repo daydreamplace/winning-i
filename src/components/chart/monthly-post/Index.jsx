@@ -2,6 +2,7 @@ import React from "react";
 import Chart from "react-apexcharts";
 import styled from "styled-components";
 
+
 const Post = () => {
   const data = {
     series: [

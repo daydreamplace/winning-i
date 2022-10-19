@@ -3,6 +3,7 @@ import Chart from "react-apexcharts";
 import { COLOR_5 } from "../constants/Index";
 import styled from "styled-components";
 
+
 const Visitor = () => {
   const data = {
     series: [
