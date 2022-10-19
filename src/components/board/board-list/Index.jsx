@@ -20,6 +20,7 @@ const Board = () => {
 
   return (
     <BoardSpace>
+      <h1>BOARD</h1>
       <div className="button">
         <Button type="primary" onClick={onCreate}>
           POST
@@ -64,6 +65,14 @@ const columns = [
 ];
 
 const BoardSpace = styled.div`
+  padding: 20px;
+
+  h1 {
+    color: #ff6b72;
+    font-weight: 600;
+    font-size: 50px;
+  }
+
   .button {
     display: flex;
     justify-content: flex-end;

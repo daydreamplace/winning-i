@@ -12,7 +12,7 @@ const Login = () => {
   };
 
   const goMain = () => {
-    navigate("/chart");
+    navigate("/board");
   };
 
   return (
@@ -25,6 +25,7 @@ const Login = () => {
         }}
         onFinish={onFinish}
       >
+        <h1>LOGIN</h1>
         <Form.Item
           name="username"
           rules={[
@@ -87,6 +88,13 @@ const LoginPage = styled.div`
   transform: translate(-50%, -50%);
   width: 500px;
   height: 600px;
+
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+    color: #3e82f7;
+  }
 `;
 
 const LoginForm = styled(Form)`

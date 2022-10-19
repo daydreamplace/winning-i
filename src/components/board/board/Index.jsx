@@ -49,21 +49,22 @@ const BoardCreate = () => {
   // }, [id]);
 
   return (
-    <>
+    <BoardPage>
+      <h1>BOARD</h1>
       <Card>
         <Form form={form} layout="vertical" onFinish={onFinish}>
           <Row>
             <Col xs={24} sm={24} md={24} lg={24}>
               <Row gutter={16}>
                 <Col xs={24} sm={24} md={24} lg={12}>
-                  <Form.Item label="제목" name="title">
+                  <Form.Item label="Title" name="title">
                     <Title
                       disabled={id && !location.pathname.includes("update")}
                     />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24}>
-                  <Form.Item label="content" name="content">
+                  <Form.Item label="Content" name="content">
                     {id && !location.pathname.includes("update") ? (
                       <Viewer watchContent={watchContent} />
                     ) : (
@@ -94,9 +95,20 @@ const BoardCreate = () => {
           </div>
         </Form>
       </Card>
-    </>
+    </BoardPage>
   );
 };
+
+const BoardPage = styled.div`
+  padding: 20px;
+
+  h1 {
+    margin-bottom: 10px;
+    color: #3e82f7;
+    font-weight: 600;
+    font-size: 50px;
+  }
+`;
 
 const Title = styled(Input)`
   width: 100%;

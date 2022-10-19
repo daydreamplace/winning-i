@@ -17,7 +17,7 @@ const Chart = () => {
   return (
     <ChartPage>
       <h1>CHART</h1>
-      <div className="top">
+      <div className="button">
         <Button type="primary" icon={<DownloadOutlined />} onClick={onSave}>
           Image Save
         </Button>
@@ -42,7 +42,7 @@ const ChartPage = styled.div`
     font-size: 50px;
   }
 
-  .top {
+  .button {
     display: flex;
     justify-content: flex-end;
   }
