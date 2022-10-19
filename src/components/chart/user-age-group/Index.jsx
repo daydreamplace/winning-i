@@ -16,9 +16,13 @@ const AgeGroup = () => {
 
 const ChartStyle = styled(Chart)`
   width: 30%;
+  background-color: #ebebeb;
+  border: 1px solid transparent;
+  border-radius: 5px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1028px) {
     width: 100%;
+    margin: 10px 0;
   }
 `;
 

@@ -26,7 +26,7 @@ const Visitor = () => {
       xaxis: {
         categories: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
       },
-      title: { text: "Monthly Vistor", align: "left" },
+      title: { text: "Monthly Vistor", align: "center" },
     },
   };
 
@@ -34,10 +34,16 @@ const Visitor = () => {
 };
 
 const ChartStyle = styled(Chart)`
+  display: flex;
+  align-items: center;
   width: 30%;
+  background-color: #ebebeb;
+  border: 1px solid transparent;
+  border-radius: 5px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1028px) {
     width: 100%;
+    margin: 10px 0;
   }
 `;
 

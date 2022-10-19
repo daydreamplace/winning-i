@@ -16,13 +16,8 @@ const Chart = () => {
 const Charts = styled.div`
   display: flex;
   justify-content: space-between;
-  /* align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
-  padding: 0 10px; */
 
-  @media (max-width: 768px) {
+  @media (max-width: 1028px) {
     flex-direction: column;
     width: 100%;
   }
