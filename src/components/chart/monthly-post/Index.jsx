@@ -53,7 +53,7 @@ const ChartStyle = styled(Chart)`
   border: 1px solid transparent;
   border-radius: 5px;
 
-  @media (max-width: 1028px) {
+  @media (max-width: 1280px) {
     width: 100%;
     margin: 10px 0;
   }

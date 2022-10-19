@@ -17,7 +17,7 @@ const Charts = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 1028px) {
+  @media (max-width: 1280px) {
     flex-direction: column;
     width: 100%;
   }
