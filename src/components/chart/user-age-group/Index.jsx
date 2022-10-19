@@ -2,7 +2,6 @@ import React from "react";
 import Chart from "react-apexcharts";
 import styled from "styled-components";
 
-
 const AgeGroup = () => {
   const data = {
     series: [59, 65, 41, 40, 38],

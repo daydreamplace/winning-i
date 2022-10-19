@@ -2,7 +2,6 @@ import React from "react";
 import Chart from "react-apexcharts";
 import styled from "styled-components";
 
-
 const Post = () => {
   const data = {
     series: [
@@ -50,6 +49,7 @@ const ChartStyle = styled(Chart)`
   display: flex;
   align-items: center;
   width: 30%;
+  padding-right: 10px;
   background-color: #ebebeb;
   border: 1px solid transparent;
   border-radius: 5px;
