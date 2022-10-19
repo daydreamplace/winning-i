@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import styled from "styled-components";
 
 const AgeGroup = () => {
   const data = {
@@ -10,9 +11,15 @@ const AgeGroup = () => {
     },
   };
 
-  return (
-    <Chart options={data.options} series={data.series} type="pie" width={450} />
-  );
+  return <ChartStyle options={data.options} series={data.series} type="pie" />;
 };
+
+const ChartStyle = styled(Chart)`
+  width: 30%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 export default AgeGroup;

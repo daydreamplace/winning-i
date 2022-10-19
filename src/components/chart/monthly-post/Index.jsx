@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import styled from "styled-components";
 
 const Post = () => {
   const data = {
@@ -41,9 +42,15 @@ const Post = () => {
     },
   };
 
-  return (
-    <Chart options={data.options} series={data.series} type="bar" width={500} />
-  );
+  return <ChartStyle options={data.options} series={data.series} type="bar" />;
 };
+
+const ChartStyle = styled(Chart)`
+  width: 30%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 export default Post;

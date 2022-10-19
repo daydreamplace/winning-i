@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
+import axios from "axios";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
 import Editor from "../editor/Index";
 import Viewer from "../viewer/Index";
@@ -38,6 +39,13 @@ const BoardCreate = () => {
   //     form.setFieldValue("content", data.content);
   //   }
   //   fetchAPI();
+  // }, [id]);
+
+  // useEffect(() => {
+  //   if (!id) return;
+  //   axios.post('http://localhost:4000/board/').then(() => {
+  //     user: "Eden";
+  //   });
   // }, [id]);
 
   return (

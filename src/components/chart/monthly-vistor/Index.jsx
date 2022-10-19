@@ -1,6 +1,7 @@
 import React from "react";
 import Chart from "react-apexcharts";
 import { COLOR_5 } from "../constants/Index";
+import styled from "styled-components";
 
 const Visitor = () => {
   const data = {
@@ -29,7 +30,15 @@ const Visitor = () => {
     },
   };
 
-  return <Chart options={data.options} series={data.series} width={500} />;
+  return <ChartStyle options={data.options} series={data.series} />;
 };
+
+const ChartStyle = styled(Chart)`
+  width: 30%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 export default Visitor;
