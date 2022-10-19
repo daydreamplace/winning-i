@@ -31,9 +31,13 @@ const Visitor = () => {
   };
 
   return (
+<<<<<<< HEAD
     <ChartPage>
       <ChartStyle options={data.options} series={data.series} />
     </ChartPage>
+=======
+    <ChartStyle options={data.options} series={data.series} width={"100%"} />
+>>>>>>> main
   );
 };
 

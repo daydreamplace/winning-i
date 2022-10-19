@@ -43,9 +43,18 @@ const Post = () => {
   };
 
   return (
+<<<<<<< HEAD
     <ChartPage>
       <ChartStyle options={data.options} series={data.series} type="bar" />
     </ChartPage>
+=======
+    <ChartStyle
+      options={data.options}
+      series={data.series}
+      type="bar"
+      width={"100%"}
+    />
+>>>>>>> main
   );
 };
 
