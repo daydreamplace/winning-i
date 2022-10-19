@@ -115,11 +115,13 @@ const BoardCreate = () => {
                   : undefined
               }
             >
-              {isDetailPage ? "update" : "save"}
+              {isDetailPage ? "EDIT" : "Register"}
             </Buttons>
-            <Buttons type="default" htmlType="button" onClick={onClick}>
-              remove
-            </Buttons>
+            {isDetailPage ? (
+              <Buttons type="default" htmlType="button" onClick={onClick}>
+                DELETE
+              </Buttons>
+            ) : null}
           </div>
         </Form>
       </Card>
