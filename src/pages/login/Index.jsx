@@ -12,7 +12,7 @@ const Login = () => {
   };
 
   const goMain = () => {
-    navigate("/board");
+    navigate("/chart");
   };
 
   return (

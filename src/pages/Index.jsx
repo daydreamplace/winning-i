@@ -26,8 +26,8 @@ const Main = () => {
   }
 
   const items = [
-    getItem("BOARD", "1", <BsFileEarmarkPost />, "/board"),
-    getItem("CHART", "2", <BarChartOutlined />, "/chart"),
+    getItem("CHART", "1", <BarChartOutlined />, "/chart"),
+    getItem("BOARD", "2", <BsFileEarmarkPost />, "/board"),
     getItem("USER SETTING", "3", <UserOutlined />, "/user"),
     getItem("LOGOUT", "4", <BiLogOut />, "/"),
   ];
