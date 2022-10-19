@@ -3,7 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
 import Editor from "../editor/Index";
-import Viewer from "../viewer/Index";
+import { Viewer } from "@toast-ui/react-editor";
 import styled from "styled-components";
 
 const BoardCreate = () => {
@@ -26,20 +26,18 @@ const BoardCreate = () => {
     });
   };
 
-  // useEffect(() => {
-  //   if (!id) return;
-  //   // data fetch
-  //   async function fetchAPI() {
-  //     const data = await Promise.resolve({
-  //       title: "데이터 제목",
-  //       user: "Eden",
-  //       content: "12312312",
-  //     });
-  //     form.setFieldValue("title", data.title);
-  //     form.setFieldValue("content", data.content);
-  //   }
-  //   fetchAPI();
-  // }, [id]);
+  useEffect(() => {
+    if (!id) return;
+    // data fetch
+    async function fetchAPI() {
+      const data = await axios
+        .get("http://localhost:4000/board/" + id)
+        .then((res) => res.data);
+      form.setFieldValue("title", data.title);
+      form.setFieldValue("content", data.content);
+    }
+    fetchAPI();
+  }, [id]);
 
   // useEffect(() => {
   //   if (!id) return;
@@ -65,7 +63,11 @@ const BoardCreate = () => {
                 <Col xs={24} sm={24} md={24} lg={24}>
                   <Form.Item label="content" name="content">
                     {id && !location.pathname.includes("update") ? (
-                      <Viewer watchContent={watchContent} />
+                      <>
+                        {watchContent ? (
+                          <Viewer initialValue={watchContent} />
+                        ) : null}
+                      </>
                     ) : (
                       <Editor
                         initialValue={watchContent}
