@@ -8,10 +8,10 @@
 
 // export default ContentsViewer;
 
-import "@toast-ui/editor/dist/toastui-editor-viewer.css";
 import { Viewer } from "@toast-ui/react-editor";
+import "@toast-ui/editor/dist/toastui-editor-viewer.css";
 
-const ContentViewer = ({ wacthContent }) => {
+const ContentViewer = ({ wacthContent, ...props }) => {
   return <Viewer initialValue={wacthContent} />;
 };
 
