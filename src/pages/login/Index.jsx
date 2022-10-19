@@ -12,7 +12,7 @@ const Login = () => {
   };
 
   const goMain = () => {
-    navigate("/");
+    navigate("/chart");
   };
 
   return (
@@ -58,7 +58,6 @@ const Login = () => {
           <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
-
           <a className="login-form-forgot" href="">
             Forgot password
           </a>

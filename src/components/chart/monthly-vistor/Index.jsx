@@ -1,7 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import { COLOR_2 } from "./constants/ChartConstant";
-import styled from "styled-components";
+import { COLOR_5 } from "../constants/Index";
 
 const Visitor = () => {
   const data = {
@@ -22,24 +21,15 @@ const Visitor = () => {
         curve: "smooth",
         width: 5,
       },
-      colors: [COLOR_2],
+      colors: [COLOR_5],
       xaxis: {
         categories: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
       },
+      title: { text: "Monthly Vistor", align: "left" },
     },
   };
 
-  return (
-    <VistorChart>
-      <h1>Monthly Vistor</h1>
-      <Chart options={data.options} series={data.series} width={500} />
-    </VistorChart>
-  );
+  return <Chart options={data.options} series={data.series} width={500} />;
 };
-
-const VistorChart = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 export default Visitor;

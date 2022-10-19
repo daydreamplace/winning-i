@@ -26,10 +26,10 @@ const Main = () => {
   }
 
   const items = [
-    getItem("CHART", "1", <BarChartOutlined />, "/"),
+    getItem("CHART", "1", <BarChartOutlined />, "/chart"),
     getItem("BOARD", "2", <BsFileEarmarkPost />, "/board"),
     getItem("USER SETTING", "3", <UserOutlined />, "/user"),
-    getItem("LOGOUT", "4", <BiLogOut />, "/login"),
+    getItem("LOGOUT", "4", <BiLogOut />, "/"),
   ];
 
   return (
