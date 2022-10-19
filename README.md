@@ -79,9 +79,9 @@ npm run dev
 - styled-components
 - react-icons
 - Ant design
-- Tailwind css
 - Toast ui editor
 - Apex Chart
+- json-server
 
 <br />
 
