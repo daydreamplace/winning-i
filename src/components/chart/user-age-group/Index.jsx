@@ -11,7 +11,14 @@ const AgeGroup = () => {
     },
   };
 
-  return <ChartStyle options={data.options} series={data.series} type="pie" />;
+  return (
+    <ChartStyle
+      options={data.options}
+      series={data.series}
+      type="pie"
+      width={"100%"}
+    />
+  );
 };
 
 const ChartStyle = styled(Chart)`

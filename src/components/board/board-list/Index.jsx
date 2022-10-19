@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { apiClient } from "../../../api/client";
 import { Button, Table } from "antd";
 import styled from "styled-components";
 
@@ -13,7 +13,7 @@ const Board = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:4000/board").then((res) => {
+    apiClient.get("/board").then((res) => {
       setBoardList(res.data);
     });
   }, []);
@@ -27,6 +27,7 @@ const Board = () => {
         </Button>
       </div>
       <Table
+        rowKey="id"
         columns={columns}
         dataSource={boardList}
         onRow={(row) => {
@@ -68,7 +69,7 @@ const BoardSpace = styled.div`
   padding: 20px;
 
   h1 {
-    color: #ff6b72;
+    color: #3e82f7;
     font-weight: 600;
     font-size: 50px;
   }

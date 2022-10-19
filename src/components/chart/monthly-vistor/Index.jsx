@@ -30,7 +30,9 @@ const Visitor = () => {
     },
   };
 
-  return <ChartStyle options={data.options} series={data.series} />;
+  return (
+    <ChartStyle options={data.options} series={data.series} width={"100%"} />
+  );
 };
 
 const ChartStyle = styled(Chart)`

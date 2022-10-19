@@ -42,7 +42,14 @@ const Post = () => {
     },
   };
 
-  return <ChartStyle options={data.options} series={data.series} type="bar" />;
+  return (
+    <ChartStyle
+      options={data.options}
+      series={data.series}
+      type="bar"
+      width={"100%"}
+    />
+  );
 };
 
 const ChartStyle = styled(Chart)`
