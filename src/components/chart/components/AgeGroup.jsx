@@ -6,24 +6,7 @@ const AgeGroup = () => {
   const data = {
     series: [59, 65, 41, 40, 38],
     options: {
-      chart: {
-        width: 380,
-        type: "pie",
-      },
       labels: ["20's", "30's", "40's", "50's", "60's"],
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200,
-            },
-            legend: {
-              position: "bottom",
-            },
-          },
-        },
-      ],
     },
   };
 
@@ -34,7 +17,7 @@ const AgeGroup = () => {
         options={data.options}
         series={data.series}
         type="pie"
-        width={500}
+        width={450}
       />
     </AgeChart>
   );

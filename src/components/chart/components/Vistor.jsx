@@ -14,9 +14,6 @@ const Visitor = () => {
     options: {
       chart: {
         type: "line",
-        zoom: {
-          enabled: false,
-        },
       },
       dataLabels: {
         enabled: false,
