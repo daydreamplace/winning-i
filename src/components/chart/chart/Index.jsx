@@ -1,6 +1,6 @@
-import Vistor from "./components/Vistor";
-import AgeGroup from "./components/AgeGroup";
-import Post from "./components/Post";
+import Vistor from "../monthly-vistor/Index";
+import AgeGroup from "../user-age-group/Index";
+import Post from "../monthly-post/Index";
 import styled from "styled-components";
 
 const Chart = () => {

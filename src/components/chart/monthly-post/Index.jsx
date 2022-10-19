@@ -1,6 +1,5 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import styled from "styled-components";
 
 const Post = () => {
   const data = {
@@ -38,25 +37,13 @@ const Post = () => {
           },
         },
       },
+      title: { text: "Monthly Post", align: "left" },
     },
   };
 
   return (
-    <PostChart>
-      <h1>Monthly Post</h1>
-      <Chart
-        options={data.options}
-        series={data.series}
-        type="bar"
-        width={500}
-      />
-    </PostChart>
+    <Chart options={data.options} series={data.series} type="bar" width={500} />
   );
 };
-
-const PostChart = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 export default Post;

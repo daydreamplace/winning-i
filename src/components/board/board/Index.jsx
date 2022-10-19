@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { Card, Form, Row, Col, Input, Button, Modal } from "antd";
-import Editor from "./components/Editor";
-import Viewer from "./components/Viewer";
+import Editor from "../editor/Index";
+import Viewer from "../viewer/Index";
 import styled from "styled-components";
 
 const BoardCreate = () => {
