@@ -2,10 +2,10 @@ import Vistor from "../monthly-vistor/Index";
 import { Button } from "antd";
 import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
+import { DownloadOutlined } from "@ant-design/icons";
 import AgeGroup from "../user-age-group/Index";
 import Post from "../monthly-post/Index";
 import styled from "styled-components";
-import { DownloadOutlined } from "@ant-design/icons";
 
 const Chart = () => {
   const onSave = () => {
