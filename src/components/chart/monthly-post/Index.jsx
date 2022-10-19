@@ -1,5 +1,7 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import styled from "styled-components";
+
 
 const Post = () => {
   const data = {
@@ -37,13 +39,25 @@ const Post = () => {
           },
         },
       },
-      title: { text: "Monthly Post", align: "left" },
+      title: { text: "Monthly Post", align: "center" },
     },
   };
 
-  return (
-    <Chart options={data.options} series={data.series} type="bar" width={500} />
-  );
+  return <ChartStyle options={data.options} series={data.series} type="bar" />;
 };
+
+const ChartStyle = styled(Chart)`
+  display: flex;
+  align-items: center;
+  width: 30%;
+  background-color: #ebebeb;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  @media (max-width: 1280px) {
+    width: 100%;
+    margin: 10px 0;
+  }
+`;
 
 export default Post;
