@@ -25,19 +25,20 @@ const BoardCreate = () => {
     });
   };
 
-  useEffect(() => {
-    if (!id) return;
-    // data fetch
-    async function fetchAPI() {
-      const data = await Promise.resolve({
-        title: "데이터 제목",
-        content: "12312312",
-      });
-      form.setFieldValue("title", data.title);
-      form.setFieldValue("content", data.content);
-    }
-    fetchAPI();
-  }, [id]);
+  // useEffect(() => {
+  //   if (!id) return;
+  //   // data fetch
+  //   async function fetchAPI() {
+  //     const data = await Promise.resolve({
+  //       title: "데이터 제목",
+  //       user: "Eden",
+  //       content: "12312312",
+  //     });
+  //     form.setFieldValue("title", data.title);
+  //     form.setFieldValue("content", data.content);
+  //   }
+  //   fetchAPI();
+  // }, [id]);
 
   return (
     <>
@@ -70,13 +71,18 @@ const BoardCreate = () => {
               </Row>
             </Col>
           </Row>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button type="primary" htmlType="submit">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Buttons type="primary" htmlType="submit">
               저장
-            </Button>
-            <Button type="default" htmlType="button">
+            </Buttons>
+            <Buttons type="default" htmlType="button">
               remove
-            </Button>
+            </Buttons>
           </div>
         </Form>
       </Card>
@@ -86,6 +92,10 @@ const BoardCreate = () => {
 
 const Title = styled(Input)`
   width: 100%;
+`;
+
+const Buttons = styled(Button)`
+  margin: 0 10px;
 `;
 
 export default BoardCreate;
