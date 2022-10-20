@@ -5,7 +5,7 @@ import Chart from "./pages/chart/Index";
 import Board from "./pages/board/Index";
 import BoardCreate from "./components/board/board-create/Index";
 import Login from "./pages/login/Index";
-import User from "./components/user/Index";
+import User from "./pages/user/Index";
 import { ThemeProvider } from "styled-components";
 import * as Theme from "./Theme";
 import GlobalStyle from "./GlobalStyle";
