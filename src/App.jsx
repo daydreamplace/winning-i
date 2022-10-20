@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Main from "./pages/Index";
-import Chart from "./components/chart/chart/Index";
-import BoardList from "./components/board/board-list/Index";
-import Board from "./components/board/board/Index";
+import Main from "./pages/main/Index";
+import Chart from "./pages/chart/Index";
+import Board from "./pages/board/Index";
+import BoardCreate from "./components/board/board-create/Index";
 import Login from "./pages/login/Index";
 import User from "./components/user/Index";
 import { ThemeProvider } from "styled-components";
@@ -22,10 +22,10 @@ const App = () => {
               <Route end index element={<Chart />} />
             </Route>
             <Route path="/board" element={<Main />}>
-              <Route end index element={<BoardList />} />
-              <Route path="create" element={<Board />} />
-              <Route path=":id" element={<Board />} />
-              <Route path=":id/update" element={<Board />} />
+              <Route end index element={<Board />} />
+              <Route path="create" element={<BoardCreate />} />
+              <Route path=":id" element={<BoardCreate />} />
+              <Route path=":id/update" element={<BoardCreate />} />
             </Route>
             <Route path="/user" element={<Main />}>
               <Route end index element={<User />} />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { apiClient } from "../../../api/client";
+import { apiClient } from "../../api/client";
 import { Button, Table } from "antd";
 import styled from "styled-components";
 
