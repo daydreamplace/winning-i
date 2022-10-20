@@ -1,18 +1,17 @@
 # 👩🏻‍💻 WINNIG I - CHART & BOARD 만들기
 
-## JUSTCODE 6기 기업협업 2주차 과제 (WINNIG I)
-#### WINNING.I 기업과제 가이드에 따라 admin page로 정의하고 프로젝트를 진행했습니다.
+## JUSTCODE 6기 기업협업 3주차 과제 (WINNIG I)
+#### WINNING.I 기업과제 가이드에 따라 admin site로 정의하고 프로젝트를 진행했습니다.
 #### 과제 SAMPLE을 참고하여 저의 판단 및 해석으로 프로젝트 진행했습니다.
-#### 제가 활용해보고 싶은 라이브러리와 기술 스택으로 진행되었습니다.
-#### 시간 관계 상  모든 기능이 구현 된 것은 아니지만, 필수 구현 사항은 모두 진행할 수 있도록 했습니다.
+#### 그 동안 프로젝트를 진행해보며 활용해보고 싶었던 라이브러리와 기술 스택으로 진행했습니다!
+#### 시간 관계 상 모든 기능이 구현 된 것은 아니지만, 필수 구현 사항은 모두 진행할 수 있도록 했습니다.
 
 <br />
 
 ---
 
-## **[📌링크]()**
-- 🚨 배포 사이트를 들어가기 전에 서버를 꼭 켜야됩니다. 🚨
- <br />
+## **[📌배포 사이트]( https://eden-winning-i.netlify.app )**
+🚨 배포 사이트를 들어가기 전에 서버를 꼭 켜야됩니다. 🚨
 아래 서버 실행 방법을 참고하셔서 서버를 키신 후에 배포 사이트 이용 바랍니다.
  <br/>
 
@@ -98,8 +97,9 @@ password : 1234@qwer"
 ## 📂 파일 프로젝트 구조
 
 - `db.json`: json-server 파일
-- `src/pages`: Index 페이지 폴더
+- `src/pages`: main 페이지와 그 외 페이지 폴더
 - `src/components`: components 폴더
+- `src/api`: api 통신 폴더
   <br />
   <br />
 
@@ -124,8 +124,10 @@ password : 1234@qwer"
 
 <br />
 
-##  구현 기능
-### 
+## 📑 구현 기능 (Page 혹은 Component 단위 설명)
+#### ✅ api
+- .env 파일에 API 주소 저장 관리
+- api/client.jsx에서 `axios`사용해 API 호출
 
 #### ✅ Login & Logout
 - `antd`를 활용해 레이아웃 구현
@@ -157,12 +159,13 @@ password : 1234@qwer"
 
   <br />
 #### ✅ Board 작성 페이지
-- `toast-ui-editor`를 활용해 Markdown & WYSIWYG 에디터 구현, color-syntax 선택 가능하게 레이아웃, 작성 기능 구현
+- `antd`와 `toast-ui-editor`를 활용해 Markdown & WYSIWYG 에디터 구현, color-syntax 선택 가능하게 레이아웃, 작성 기능 구현
 - 게시글 작성 후 Register 버튼 클릭 시 게시글 DB에 저장되게 구현
 - 게시글 DB 등록 후 Board 페이지로 이동
 
   <br />
 #### ✅ Board 상세 페이지
+- `antd`와 `toast-ui-viewer`를 활용해 레이아웃 구현
 - `json-server`데이터를 받아서 상세 페이지 구현
 - 상세 페이지 하단 EDIT 버튼 클릭 시 게시글 수정 가능하게 구현
 - 상세 페이지 하단 DELETE 버튼 클릭 시 게시글 삭제 기능 구현
