@@ -125,6 +125,8 @@ password : 1234@qwer"
 <br />
 
 ## 📑 구현 기능 (Page 혹은 Component 단위 설명)
+ <br/>
+ 
 #### ✅ api
 - .env 파일에 API 주소 저장 관리
 - api/client.jsx에서 `axios`사용해 API 호출
