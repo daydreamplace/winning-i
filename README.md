@@ -97,8 +97,9 @@ password : 1234@qwer"
 ## 📂 파일 프로젝트 구조
 
 - `db.json`: json-server 파일
-- `src/pages`: Index 페이지와 그 외 페이지 폴더
+- `src/pages`: main 페이지와 그 외 페이지 폴더
 - `src/components`: components 폴더
+- `src/api`: api 통신 폴더
   <br />
   <br />
 
