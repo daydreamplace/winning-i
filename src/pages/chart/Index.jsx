@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { apiClient } from "../../../api/client";
+import { apiClient } from "../../api/client";
 import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
 import { Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
-import AgeGroup from "../user-age-group/Index";
-import Post from "../monthly-post/Index";
-import Vistor from "../monthly-vistor/Index";
+import AgeGroup from "../../components/chart/user-age-group/Index";
+import Post from "../../components/chart/monthly-post/Index";
+import Vistor from "../../components/chart/monthly-vistor/Index";
 import styled from "styled-components";
 
 const Chart = () => {
